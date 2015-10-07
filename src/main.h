@@ -4,5 +4,7 @@
 void test_single_gfx();
 void test_mul_gfx();
 
+void font_test();
+
 
 #endif
