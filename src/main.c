@@ -2,6 +2,7 @@
 
 #include "main.h"
 #include "gfx.h"
+#include "sound.h"
 
 #include "tiles/colorRects.h"
 
@@ -10,23 +11,101 @@ int main(){
 
     initialize_font();
 
-    while(1){
-        test_single_gfx();
-        font_test();
-        wait_vbl_done();
-        write_bkg();
+    /*sound2_test();*/
+    /*sound1_test();*/
+    sound4_test();
 
-        test_mul_gfx();
-        font_test();
-        wait_vbl_done();
-        write_bkg();
-    }
+    /*while(1){*/
+        /*test_single_gfx();*/
+        /*font_test();*/
+        /*wait_vbl_done();*/
+        /*write_bkg();*/
+
+        /*test_mul_gfx();*/
+        /*font_test();*/
+        /*wait_vbl_done();*/
+        /*write_bkg();*/
+    /*}*/
 
     /*test_single_gfx();*/
     /*test_mul_gfx();*/
     /*font_test();*/
     /*font_gfx_test();*/
 
+
+
+
+
+}
+
+void sound2_test(){
+
+    initialize_sound();
+
+    /*sound2_envelope(7, 1500, 1, 3);*/
+    /*sound2_envelope(7, 1500, 1, 0);*/
+    /*sound2_length(7, 1500, 64);*/
+    /*sound2(7, 2044);*/
+    /*sound2(7, 200);*/
+    /*sound2_envelope_length(7, 200,*/
+            /*1, 3, 64);*/
+    /*sound2_envelope_length(7, 200,*/
+            /*1, 3, 63);*/
+
+
+
+
+}
+
+void sound1_test(){
+
+    initialize_sound();
+
+    /*sound1_envelope_length_swee(7, 500,*/
+        /*0, 0, 64,*/
+        /*2, 1, 7);*/
+    /*sound1_envelope_length(7, 500,*/
+        /*2, 2, 63);*/
+    /*sound1_length_sweep(7, 500, 64,*/
+        /*2, 1, 7);*/
+    /*sound1_length(7, 500, 63);*/
+    /*sound1_envelope_sweep(7, 500,*/
+        /*1, 1,*/
+        /*2, 1, 7);*/
+    /*sound1_envelope(7, 500,*/
+        /*1, 3);*/
+    /*sound1_sweep(7, 500,*/
+        /*2, 1, 7);*/
+    sound1(7, 440);
+    sound2(7, 880);
+
+}
+
+void sound4_test(){
+
+    initialize_sound();
+
+    /*UINT8 volume = 7;*/
+    /*UINT8 s = 5;//0-15*/
+    /*UINT8 blob = 0;//0-1*/
+    /*UINT8 r = 4;//0-7*/
+
+    /*initialize_sound();*/
+
+    /*NR42_REG = volume << 4;*/
+    /*NR43_REG = (s << 4) | (blob << 3) | r;*/
+    /*NR44_REG = 0x80;*/
+
+    /*sound4_envelope_length(7, 5,*/
+        /*0, 4,*/
+        /*2, 0,*/
+        /*64);*/
+    /*sound4_envelope(7, 5, 0,*/
+        /*4, 2, 2);*/
+    /*sound4_length(7, 5, 0,*/
+        /*4, 63);*/
+    sound4(7, 5, 1,
+        4);
 
 
 
