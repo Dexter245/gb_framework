@@ -1,21 +1,27 @@
 #include <gb/gb.h>
+#include <stdio.h>
 
 #include "main.h"
 #include "gfx.h"
 #include "sound.h"
+#include "timer.h"
 
 #include "tiles/colorRects.h"
 
 
 int main(){
 
-    initialize_font();
+    /*initialize_font();*/
+    initialize_timer();
 
     /*sound2_test();*/
     /*sound1_test();*/
-    sound4_test();
+    /*sound4_test();*/
 
-    /*while(1){*/
+
+    while(1){
+        wait_vbl_done();
+        timer_test();
         /*test_single_gfx();*/
         /*font_test();*/
         /*wait_vbl_done();*/
@@ -25,7 +31,7 @@ int main(){
         /*font_test();*/
         /*wait_vbl_done();*/
         /*write_bkg();*/
-    /*}*/
+    }
 
     /*test_single_gfx();*/
     /*test_mul_gfx();*/
@@ -35,6 +41,13 @@ int main(){
 
 
 
+
+}
+
+void timer_test(){
+
+    /*printf("time16: %u, secs: %u\n", time16, time16/16);*/
+    printf("t16: %u, secs: %u\n", time16, time16/16);
 
 }
 

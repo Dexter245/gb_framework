@@ -10,5 +10,7 @@ void sound2_test();
 void sound1_test();
 void sound4_test();
 
+void timer_test();
+
 
 #endif
