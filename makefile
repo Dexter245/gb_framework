@@ -2,7 +2,7 @@
 CC=$(GBDKDIR)bin/lcc
 BIN_RELEASE=bin/release.gb
 BIN_DEBUG=bin/debug.gb
-SRC=src/main.c src/gfx.c src/sound.c src/timer.c
+SRC=src/main.c src/gfx.c src/sound.c src/timer.c src/input.c
 #TILES=src/tiles/white.c src/tiles/light_grey.c src/tiles/dark_grey.c src/tiles/black.c
 TILES=src/tiles/colorRects.c
 

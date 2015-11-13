@@ -5,13 +5,14 @@
 #include "gfx.h"
 #include "sound.h"
 #include "timer.h"
+#include "input.h"
 
 #include "tiles/colorRects.h"
 
 
 int main(){
 
-    /*initialize_font();*/
+    initialize_font();
     initialize_timer();
 
     /*sound2_test();*/
@@ -21,7 +22,9 @@ int main(){
 
     while(1){
         wait_vbl_done();
-        timer_test();
+
+        input_test();
+        /*timer_test();*/
         /*test_single_gfx();*/
         /*font_test();*/
         /*wait_vbl_done();*/
@@ -41,6 +44,56 @@ int main(){
 
 
 
+
+}
+
+void input_test(){
+
+    refresh_button_states();
+
+    set_bkg_mul(0, 0, 20, 18, 0);
+
+    render_text(0, 0, "pressed:");
+
+
+    if(is_button_pressed(J_LEFT))
+        render_text(0, 1, "L");
+    if(is_button_pressed(J_RIGHT))
+        render_text(1, 1, "R");
+    if(is_button_pressed(J_UP))
+        render_text(2, 1, "U");
+    if(is_button_pressed(J_DOWN))
+        render_text(3, 1, "D");
+    if(is_button_pressed(J_A))
+        render_text(4, 1, "A");
+    if(is_button_pressed(J_B))
+        render_text(5, 1, "B");
+    if(is_button_pressed(J_START))
+        render_text(6, 1, "T");
+    if(is_button_pressed(J_SELECT))
+        render_text(7, 1, "E");
+
+    render_text(0, 2, "just pressed");
+
+    if(is_button_just_pressed(J_LEFT))
+        render_text(0, 3, "L");
+    if(is_button_just_pressed(J_RIGHT))
+        render_text(1, 3, "R");
+    if(is_button_just_pressed(J_UP))
+        render_text(2, 3, "U");
+    if(is_button_just_pressed(J_DOWN))
+        render_text(3, 3, "D");
+    if(is_button_just_pressed(J_A))
+        render_text(4, 3, "A");
+    if(is_button_just_pressed(J_B))
+        render_text(5, 3, "B");
+    if(is_button_just_pressed(J_START))
+        render_text(6, 3, "T");
+    if(is_button_just_pressed(J_SELECT))
+        render_text(7, 3, "E");
+
+
+    write_bkg();
 
 }
 
